@@ -22,7 +22,7 @@ void update_game(game_t *game, window_t *window, scene_t *scene)
     update_view(game, &scene[S_GAME], game->link, DT);
     update_link(game);
     update_arrow(game->link);
-    update_monst_list(game->link->ground, game->zones, game->link);
+    update_monst_list(game->link->ground, game->zones, game->link, game);
     update_ui(game);
     update_music(game->music, game->link->pos);
 }

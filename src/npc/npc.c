@@ -80,6 +80,9 @@ void create_quest(people_t *pop, game_t * game)
     pop->npc[3] = create_npc((sfVector2f){6666, 5550},
         pop->texture, pop->spr, pop->nb_spr);
     pop->npc[3]->state = 5;
+    pop->npc[4] = create_npc((sfVector2f){13760, 4300},
+        pop->texture, pop->spr, pop->nb_spr);
+    pop->npc[4]->state = 8;
     init_quest(pop, game);
 }
 
@@ -91,9 +94,9 @@ people_t *create_people(game_t *game)
     pop->texture = fill_texture("assets/npc_sprite", pop->nb_spr);
     pop->spr = fill_sprites(pop->nb_spr, pop->texture);
     pop->col = (npc_col_t){1, 1, 1, 1};
-    pop->pop = 29;
-    pop->nb_rnd = 32;
-    pop->nb_quest = 8;
+    pop->pop = 30;
+    pop->nb_rnd = 33;
+    pop->nb_quest = 9;
     create_dialog(pop);
     pop->npc = malloc(sizeof(npc_t *) * pop->pop);
     create_quest(pop, game);

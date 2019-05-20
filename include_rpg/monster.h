@@ -36,6 +36,6 @@ void update_anim_boss(monster_t *m);
 sfVector2f random_disp(monster_t *monst);
 
 void move_big_bird(sfIntRect ground, monster_t *monst_list,
-    arrow_t *arrow);
+    arrow_t *arrow, game_t *game);
 
 #endif /* !MONSTER_H_ */

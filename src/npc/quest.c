@@ -21,7 +21,7 @@ void init_quest(people_t *pop, game_t *game)
 {
     if (game->ui.arrow.drawable) {
         get_bow(game);
-        game->pop->npc[2]->state = 4;
+        pop->npc[2]->state = 4;
         pop->npc[3]->state = 6;
     }
 }
@@ -36,7 +36,7 @@ void create_rng_npc(people_t *pop)
     {6020, 3784}, {5642, 3600}};
     int j = 0;
 
-    for (int i = 4; i < pop->pop; i++) {
+    for (int i = 5; i < pop->pop; i++) {
         pop->npc[i] = create_npc(pos[j], pop->texture, pop->spr, pop->nb_spr);
         j++;
     }

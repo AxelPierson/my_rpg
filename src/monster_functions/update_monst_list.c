@@ -82,7 +82,8 @@ void update_monster(sfIntRect ground, zone_t *zone, link_t *link)
     }
 }
 
-void update_monst_list(sfIntRect ground, arraylist_t *zone_list, link_t *link)
+void update_monst_list(sfIntRect ground, arraylist_t *zone_list,
+    link_t *link, game_t *game)
 {
     zone_t *temp_zone = NULL;
 
@@ -93,6 +94,6 @@ void update_monst_list(sfIntRect ground, arraylist_t *zone_list, link_t *link)
             bow_kill((zone_t *)zone_list->array[i], link);
         } else if (temp_zone->status == 1 && temp_zone->ID == 3)
             move_big_bird(ground, (monster_t *)temp_zone->monst_list->array[0],
-                link->arrow);
+                link->arrow, game);
     }
 }
