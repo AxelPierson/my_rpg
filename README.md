@@ -11,18 +11,18 @@ https://www.youtube.com/watch?v=AFMPK4B1MVs
 
 For the compilation of this project, the csfml library is needed.
 You can install it with :
-'''bash
+```bash
 sudo apt-get install libsfml-dev
-'''
+```
 
 Use the make file to compile the project.
 
-'''bash
+```bash
 make
-'''
+```
 
 ## Usage
 
-'''bash
+```bash
 ./my_rpg
-'''
+```
